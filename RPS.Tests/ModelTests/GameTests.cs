@@ -15,8 +15,17 @@ namespace RPS.Tests
     [TestMethod]
     public void GameConstructor_CreateInstanceOfGame_Game()
     {
-      Game newGame = new Game();
+      Game newGame = new Game("test");
       Assert.AreEqual(typeof(Game), newGame.GetType());
+    }
+
+    [TestMethod]
+    public void GetDescription_ReturnDescription_String()
+    {
+      string description = "rock";
+      Game newGame = new Game(description);
+      string result = newGame.Description;
+      Assert.AreEqual(description, result);
     }
   }
 }
