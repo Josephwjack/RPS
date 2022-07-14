@@ -27,5 +27,15 @@ namespace RPS.Tests
       string result = newGame.Description;
       Assert.AreEqual(description, result);
     }
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      string description = "rock";
+      Game newGame = new Game(description);
+      string updatedDescription = "paper";
+      newGame.Description = updatedDescription;
+      string result = newGame.Description;
+      Assert.AreEqual(updatedDescription, result);
+    }
   }
 }
