@@ -27,15 +27,31 @@ namespace RPS.Models
           Environment.Exit(0);
         }
       }
-        // Player One wins with rock
-      else if (PlayerOne.Description == "rock" && PlayerTwo.Description == "scissors")
+        // Player One wins
+      else if (PlayerOne.Description == "rock" && PlayerTwo.Description == "scissors" || PlayerOne.Description == "paper" && PlayerTwo.Description == "rock" || PlayerOne.Description == "scissors" && PlayerTwo.Description == "paper")
       {
-      Console.WriteLine("Player One wins!");
+        Console.WriteLine("Player One Wins! Would you like to play again?(yes/no)");
+        string response = Console.ReadLine();
+        if (response == "yes")
+        {
+          Main();
+        }
+        else {
+          Environment.Exit(0);
+        }
       }
-      // Player Two wins with scissors
-      else if (PlayerOne.Description == "scissors" && PlayerTwo.Description == "rock")
+      // Player Two wins
+      else if (PlayerOne.Description == "scissors" && PlayerTwo.Description == "rock" || PlayerOne.Description == "rock" && PlayerTwo.Description == "paper" || PlayerOne.Description == "paper" && PlayerTwo.Description == "scissors")
       {
-        Console.WriteLine("Player Two wins!");
+        Console.WriteLine("Player Two wins! Would you like to play again?(yes/no)");
+        string response = Console.ReadLine();
+        if (response == "yes")
+        {
+          Main();
+        }
+        else {
+          Environment.Exit(0);
+        }
       }
     }
   }
