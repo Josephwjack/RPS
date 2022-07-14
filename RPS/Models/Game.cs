@@ -1,3 +1,5 @@
+using System;
+
 namespace RPS.Models
 {
   public class Game
@@ -7,13 +9,6 @@ namespace RPS.Models
     public Game(string description)
     {
       Description = description;
-    }
-    public void PlayGame()
-    {
-      if (rock > scissors && rock < paper && rock < atomicBomb || paper > rock && paper < scissors && paper < atomicBomb || scissors > paper && scissors < rock && scissors < atomicBomb)
-      {
-      Console.WriteLine("you win")
-      }
     }
   }
 }
